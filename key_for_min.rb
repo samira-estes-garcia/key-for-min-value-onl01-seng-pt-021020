@@ -7,11 +7,11 @@ def key_for_min_value(name_hash)
   if name_hash.empty? 
     return nil
   else
-    name_hash.collect do |key, value|
+    name_hash.collect do |k, val|
       #compare all values to each other find smallest value return that value's key
-      if value < lowest_value || lowest_value == nil
-        lowest_value = value
-        lowest_key = key
+      if val < lowest_value || lowest_value == nil
+        lowest_value = val
+        lowest_key = k
       end
     end
   end
